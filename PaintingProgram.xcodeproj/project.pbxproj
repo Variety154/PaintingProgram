@@ -3,23 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C9461552BA5BA9200B8BBDD /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */; };
 		1C9AF0C82B947A1500AFD32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */; };
 		1C9AF0CA2B947A1500AFD32D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */; };
-		1C9AF0CC2B947A1500AFD32D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9AF0CB2B947A1500AFD32D /* ViewController.swift */; };
+		1C9AF0CC2B947A1500AFD32D /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */; };
 		1C9AF0CF2B947A1500AFD32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9AF0CD2B947A1500AFD32D /* Main.storyboard */; };
 		1C9AF0D12B947A1700AFD32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9AF0D02B947A1700AFD32D /* Assets.xcassets */; };
 		1C9AF0D42B947A1700AFD32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9AF0D22B947A1700AFD32D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagesListCell.swift; path = ../PaintingProgram/ImagesListCell.swift; sourceTree = "<group>"; };
 		1C9AF0C42B947A1500AFD32D /* PaintingProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintingProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C9AF0CB2B947A1500AFD32D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagesListViewController.swift; path = ../PaintingProgram/ImagesListViewController.swift; sourceTree = "<group>"; };
 		1C9AF0CE2B947A1500AFD32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C9AF0D02B947A1700AFD32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C9AF0D32B947A1700AFD32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,9 +39,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C9461562BA5BADE00B8BBDD /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */,
+				1C9461572BA70E4A00B8BBDD /* New Group */,
+				1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */,
+			);
+			path = ImagesList;
+			sourceTree = "<group>";
+		};
+		1C9461572BA70E4A00B8BBDD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		1C9AF0BB2B947A1500AFD32D = {
 			isa = PBXGroup;
 			children = (
+				1C9461562BA5BADE00B8BBDD /* ImagesList */,
 				1C9AF0C62B947A1500AFD32D /* PaintingProgram */,
 				1C9AF0C52B947A1500AFD32D /* Products */,
 			);
@@ -58,7 +78,6 @@
 			children = (
 				1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */,
 				1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */,
-				1C9AF0CB2B947A1500AFD32D /* ViewController.swift */,
 				1C9AF0CD2B947A1500AFD32D /* Main.storyboard */,
 				1C9AF0D02B947A1700AFD32D /* Assets.xcassets */,
 				1C9AF0D22B947A1700AFD32D /* LaunchScreen.storyboard */,
@@ -103,7 +122,7 @@
 				};
 			};
 			buildConfigurationList = 1C9AF0BF2B947A1500AFD32D /* Build configuration list for PBXProject "PaintingProgram" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9AF0CC2B947A1500AFD32D /* ViewController.swift in Sources */,
+				1C9AF0CC2B947A1500AFD32D /* ImagesListViewController.swift in Sources */,
+				1C9461552BA5BA9200B8BBDD /* ImagesListCell.swift in Sources */,
 				1C9AF0C82B947A1500AFD32D /* AppDelegate.swift in Sources */,
 				1C9AF0CA2B947A1500AFD32D /* SceneDelegate.swift in Sources */,
 			);
@@ -295,11 +315,11 @@
 				DEVELOPMENT_TEAM = GS9YC7R8YL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaintingProgram/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortraitUpsideDown;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,9 +328,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.PaintingProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,11 +346,11 @@
 				DEVELOPMENT_TEAM = GS9YC7R8YL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaintingProgram/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortraitUpsideDown;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,9 +359,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.PaintingProgram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
