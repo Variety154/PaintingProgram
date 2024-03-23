@@ -17,11 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagesListCell.swift; path = ../PaintingProgram/ImagesListCell.swift; sourceTree = "<group>"; };
+		1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		1C9AF0C42B947A1500AFD32D /* PaintingProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintingProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagesListViewController.swift; path = ../PaintingProgram/ImagesListViewController.swift; sourceTree = "<group>"; };
+		1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		1C9AF0CE2B947A1500AFD32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C9AF0D02B947A1700AFD32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C9AF0D32B947A1700AFD32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,27 +39,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C9461562BA5BADE00B8BBDD /* ImagesList */ = {
+		1C9461582BAEEEBF00B8BBDD /* ImgeList */ = {
 			isa = PBXGroup;
 			children = (
-				1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */,
-				1C9461572BA70E4A00B8BBDD /* New Group */,
 				1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */,
+				1C9AF0CB2B947A1500AFD32D /* ImagesListViewController.swift */,
 			);
-			path = ImagesList;
-			sourceTree = "<group>";
-		};
-		1C9461572BA70E4A00B8BBDD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
+			path = ImgeList;
 			sourceTree = "<group>";
 		};
 		1C9AF0BB2B947A1500AFD32D = {
 			isa = PBXGroup;
 			children = (
-				1C9461562BA5BADE00B8BBDD /* ImagesList */,
 				1C9AF0C62B947A1500AFD32D /* PaintingProgram */,
 				1C9AF0C52B947A1500AFD32D /* Products */,
 			);
@@ -76,6 +67,7 @@
 		1C9AF0C62B947A1500AFD32D /* PaintingProgram */ = {
 			isa = PBXGroup;
 			children = (
+				1C9461582BAEEEBF00B8BBDD /* ImgeList */,
 				1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */,
 				1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */,
 				1C9AF0CD2B947A1500AFD32D /* Main.storyboard */,
