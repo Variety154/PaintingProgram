@@ -1,4 +1,3 @@
-//
 //  ImagesListCell.swift
 //  PaintingProgram
 //
