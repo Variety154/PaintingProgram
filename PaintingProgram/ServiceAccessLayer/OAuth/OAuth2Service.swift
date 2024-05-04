@@ -19,7 +19,6 @@ final class OAuth2Service {
         }
     }
     
-    // Функция получает 'code' на вход и отправляет POST запрос согласно работы API
     func fetchOAuthToken(
         _ code: String,
         completion: @escaping (Result<String, Error>) -> Void) {
