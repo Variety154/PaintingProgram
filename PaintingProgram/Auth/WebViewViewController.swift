@@ -13,7 +13,7 @@ final class WebViewViewController: UIViewController {
     @IBOutlet private var webView: WKWebView!
     @IBOutlet private var progressView: UIProgressView!
 
-    override func viewDidLoad() {
+    override func viewDidLoad() -> <#Return Type#> {
         super.viewDidLoad()
 
         var urlComponents = URLComponents(string: UnsplashAuthorizeURLString)!
