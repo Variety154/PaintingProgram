@@ -274,7 +274,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="aEF-Ts-4Jb" kind="presentation" identifier="ShowAuthenticationScreen" id="5Lz-FR-78Y"/>
+                        <segue destination="aEF-Ts-4Jb" kind="presentation" identifier="ShowAuthenticationScreen" id="Xul-gO-2Kj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ool-cK-flC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
