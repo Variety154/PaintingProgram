@@ -1,5 +1,5 @@
 //
-//  OAuth2TokenStorage.swift
+//  OAuth2TokenResponseBody.swift
 //  PaintingProgram
 //
 //  Created by Varvara Kiseleva on 02.05.2024.
