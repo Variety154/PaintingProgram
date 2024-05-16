@@ -15,29 +15,25 @@ protocol WebViewViewControllerDelegate: AnyObject {
 }
 
 final class WebViewViewController: UIViewController {
-    @IBOutlet private var webView: WKWebView!
-    @IBOutlet private var progressView: UIProgressView!
+    @IBOutlet var webView: WKWebView!
+    @IBOutlet var progressView: UIProgressView!
+    
     weak var delegate: WebViewViewControllerDelegate?
     
-    enum WebViewConstants {
-        static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
-    }
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        loadAuthView()
         webView.navigationDelegate = self
+        loadAuthView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            webView.addObserver(
-                self,
-                forKeyPath: #keyPath(WKWebView.estimatedProgress),
-                options: .new,
-                context: nil)
-            updateProgress()
-        }
+        super.viewDidAppear(animated)
+        webView.addObserver(
+            self,
+            forKeyPath: #keyPath(WKWebView.estimatedProgress),
+            options: .new,
+            context: nil)
+        updateProgress()
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -46,8 +42,7 @@ final class WebViewViewController: UIViewController {
     
     override func observeValue(
         forKeyPath keyPath: String?,
-        of object: Any?,
-        change: [NSKeyValueChangeKey: Any]?,
+        of object: Any?, change: [NSKeyValueChangeKey : Any]?,
         context: UnsafeMutableRawPointer?
     ) {
         if keyPath == #keyPath(WKWebView.estimatedProgress) {
@@ -61,10 +56,12 @@ final class WebViewViewController: UIViewController {
         progressView.progress = Float(webView.estimatedProgress)
         progressView.isHidden = fabs(webView.estimatedProgress - 1.0) <= 0.0001
     }
-    
+}
+
+extension WebViewViewController {
     private func loadAuthView() {
         guard var urlComponents = URLComponents(string: WebViewConstants.unsplashAuthorizeURLString) else {
-            assertionFailure("Failed to prepare for \(WebViewConstants.unsplashAuthorizeURLString)")
+            print("Ошибка unsplashAuthorizeURLString")
             return
         }
         
@@ -76,6 +73,7 @@ final class WebViewViewController: UIViewController {
         ]
         
         guard let url = urlComponents.url else {
+            print("Ошибка формирования url")
             return
         }
         
