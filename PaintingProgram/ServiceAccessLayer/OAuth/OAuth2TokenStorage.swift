@@ -6,23 +6,26 @@
 //
 
 import Foundation
+import UIKit
 
-final class OAuth2TokenStorage {
-    private let tokenKey = "OAuth2AccessToken"
-    private let storage = UserDefaults.standard
+protocol OAuth2TokenStorageProtocol {
+    var token: String? { get set }
+}
+
+final class OAuth2TokenStorage: OAuth2TokenStorageProtocol {
+    
+    private enum Keys: String {
+        case token
+    }
+    
+    private let userDefaults = UserDefaults.standard
     
     var token: String? {
-        get {
-            return storage.string(forKey: tokenKey)
-        }
-        set {
-            storage.set(newValue, forKey: tokenKey)
-        }
+            get {
+                return UserDefaults.standard.string(forKey: Keys.token.rawValue)
+            }
+            set {
+                UserDefaults.standard.set(newValue, forKey: Keys.token.rawValue)
+            }
     }
-    
-    func logout() {
-        storage.removeObject(forKey: tokenKey)
-    }
-    
-    static let shared = OAuth2TokenStorage()
 }

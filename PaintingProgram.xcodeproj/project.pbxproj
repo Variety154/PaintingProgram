@@ -90,6 +90,7 @@
 				1C65EEF12BE3A2E90031D04C /* OAuth2Service.swift */,
 				1C65EEF42BE3ADFA0031D04C /* OAuth2TokenResponseBody.swift */,
 				1C65EEFD2BEE6A590031D04C /* OAuth2TokenStorage.swift */,
+				1C65EEFB2BEE68050031D04C /* URLSession+data.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -143,7 +144,6 @@
 				1C616A4E2BDC40F700CE5C62 /* Constants.swift */,
 				1C65EEF62BE5361B0031D04C /* ServiceAccessLayer */,
 				1C65EEF72BE536BC0031D04C /* SplashViewController */,
-				1C65EEFB2BEE68050031D04C /* URLSession+data.swift */,
 				1C65EEEC2BE14D250031D04C /* Auth */,
 				1C616A482BBC244B00CE5C62 /* Profile */,
 				1C9461582BAEEEBF00B8BBDD /* ImagesList */,
