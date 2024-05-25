@@ -89,6 +89,7 @@
                     <navigationItem key="navigationItem" id="WA1-LW-Hop"/>
                     <connections>
                         <outlet property="tableView" destination="3kF-33-ghK" id="Ue1-k5-LTB"/>
+                        <segue destination="nhc-fP-2KH" kind="presentation" identifier="ShowSingleImage" id="DeM-VS-G5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCC-Um-r3T">
-                                <rect key="frame" x="8" y="56" width="48" height="48"/>
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="7Tr-ix-ZLY"/>
                                     <constraint firstAttribute="height" constant="48" id="jzi-Bq-Jnh"/>
@@ -116,7 +117,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-om-eo2">
-                                <rect key="frame" x="182" y="776" width="50" height="50"/>
+                                <rect key="frame" x="182" y="810" width="50" height="50"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="share_button"/>
                                 <connections>
@@ -170,77 +171,12 @@
                     <view key="view" contentMode="scaleToFill" id="Ge1-Q7-VpZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="gJi-su-kZ1">
-                                <rect key="frame" x="16" y="80" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="eo6-NS-ca8"/>
-                                    <constraint firstAttribute="width" constant="70" id="xgB-aU-w0i"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkV-pB-b9s" userLabel="Name Label">
-                                <rect key="frame" x="16" y="158" width="382" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhY-KU-to1" userLabel="Logout Button">
-                                <rect key="frame" x="354" y="103" width="44" height="44"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="logout_button"/>
-                                <connections>
-                                    <action selector="didTapLogoutButton" destination="JJU-XO-H9E" eventType="touchUpInside" id="TJR-Pc-056"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2a-ZI-hL5" userLabel="Login Name Label">
-                                <rect key="frame" x="16" y="193.5" width="382" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.68235294120000001" green="0.68627450980000004" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6T-di-QlZ" userLabel="Description Label">
-                                <rect key="frame" x="16" y="217.5" width="382" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="if7-GZ-pCF"/>
-                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="P6T-di-QlZ" firstAttribute="leading" secondItem="mkV-pB-b9s" secondAttribute="leading" id="05X-rY-1Fv"/>
-                            <constraint firstItem="gJi-su-kZ1" firstAttribute="top" secondItem="if7-GZ-pCF" secondAttribute="top" constant="32" id="1O9-5k-R1T"/>
-                            <constraint firstItem="w2a-ZI-hL5" firstAttribute="trailing" secondItem="mkV-pB-b9s" secondAttribute="trailing" id="2vb-cz-aBY"/>
-                            <constraint firstItem="P6T-di-QlZ" firstAttribute="top" secondItem="w2a-ZI-hL5" secondAttribute="bottom" constant="8" id="3Fl-Xg-7UB"/>
-                            <constraint firstItem="w2a-ZI-hL5" firstAttribute="leading" secondItem="mkV-pB-b9s" secondAttribute="leading" id="72x-bd-saH"/>
-                            <constraint firstItem="mkV-pB-b9s" firstAttribute="leading" secondItem="gJi-su-kZ1" secondAttribute="leading" id="EUd-bl-eW9"/>
-                            <constraint firstItem="mkV-pB-b9s" firstAttribute="top" secondItem="gJi-su-kZ1" secondAttribute="bottom" constant="8" id="GJz-AJ-mC0"/>
-                            <constraint firstItem="XhY-KU-to1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gJi-su-kZ1" secondAttribute="trailing" id="GVu-1Y-Hch"/>
-                            <constraint firstItem="w2a-ZI-hL5" firstAttribute="top" secondItem="mkV-pB-b9s" secondAttribute="bottom" constant="8" id="TjD-oD-oqR"/>
-                            <constraint firstItem="if7-GZ-pCF" firstAttribute="trailing" secondItem="mkV-pB-b9s" secondAttribute="trailing" constant="16" id="UpR-td-bTS"/>
-                            <constraint firstItem="if7-GZ-pCF" firstAttribute="trailing" secondItem="XhY-KU-to1" secondAttribute="trailing" constant="16" id="Z5E-KZ-QS2"/>
-                            <constraint firstItem="gJi-su-kZ1" firstAttribute="leading" secondItem="if7-GZ-pCF" secondAttribute="leading" constant="16" id="cyI-UK-6BF"/>
-                            <constraint firstItem="XhY-KU-to1" firstAttribute="top" secondItem="if7-GZ-pCF" secondAttribute="top" constant="55" id="d9z-KU-4ue"/>
-                            <constraint firstItem="P6T-di-QlZ" firstAttribute="trailing" secondItem="mkV-pB-b9s" secondAttribute="trailing" id="eeo-M0-I1s"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tab_profile_active" id="D2d-o3-VZd">
                         <color key="badgeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Title" id="7Fb-Dq-Y4J" userLabel="Navigation Item"/>
-                    <connections>
-                        <outlet property="avatarImageView" destination="gJi-su-kZ1" id="e3a-1j-PIX"/>
-                        <outlet property="descriptionLabel" destination="P6T-di-QlZ" id="wF6-d7-nqq"/>
-                        <outlet property="loginNameLabel" destination="w2a-ZI-hL5" id="SGN-Ms-OrP"/>
-                        <outlet property="logoutButton" destination="XhY-KU-to1" id="d3g-uK-exE"/>
-                        <outlet property="nameLabel" destination="mkV-pB-b9s" id="Tny-0O-DkE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvQ-Wg-V8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,7 +212,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o4R-xC-YOB">
             <objects>
-                <tabBarController id="OEo-v9-n8C" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="OEo-v9-n8C" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iiw-3m-Yx1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -300,32 +236,32 @@
             <objects>
                 <viewController id="0QH-Tz-tIh" customClass="WebViewViewController" customModule="PaintingProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ooh-jd-jYc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-pS-52A">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="4"/>
-                                <color key="progressTintColor" name="YP Black"/>
-                            </progressView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oia-7j-Bxv">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-pS-52A">
+                                <rect key="frame" x="0.0" y="44" width="414" height="4"/>
+                                <color key="progressTintColor" name="YP Black"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n10-nX-PRV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Oia-7j-Bxv" firstAttribute="top" secondItem="n10-nX-PRV" secondAttribute="top" id="6mF-TF-Tuw"/>
-                            <constraint firstAttribute="trailing" secondItem="Oia-7j-Bxv" secondAttribute="trailing" id="6uk-ZW-WzK"/>
-                            <constraint firstItem="Oia-7j-Bxv" firstAttribute="leading" secondItem="ooh-jd-jYc" secondAttribute="leading" id="DWg-C4-N6i"/>
-                            <constraint firstItem="VvR-pS-52A" firstAttribute="top" secondItem="n10-nX-PRV" secondAttribute="top" id="UnE-Nb-jCh"/>
-                            <constraint firstItem="n10-nX-PRV" firstAttribute="trailing" secondItem="VvR-pS-52A" secondAttribute="trailing" id="VEv-Dz-CYb"/>
-                            <constraint firstItem="n10-nX-PRV" firstAttribute="bottom" secondItem="Oia-7j-Bxv" secondAttribute="bottom" id="VQg-7Y-hcW"/>
-                            <constraint firstItem="VvR-pS-52A" firstAttribute="leading" secondItem="n10-nX-PRV" secondAttribute="leading" id="g6h-hb-sAr"/>
+                            <constraint firstItem="VvR-pS-52A" firstAttribute="leading" secondItem="n10-nX-PRV" secondAttribute="leading" id="0ZH-gk-xUa"/>
+                            <constraint firstItem="n10-nX-PRV" firstAttribute="bottom" secondItem="Oia-7j-Bxv" secondAttribute="bottom" id="Jqa-Jj-rmd"/>
+                            <constraint firstItem="VvR-pS-52A" firstAttribute="top" secondItem="n10-nX-PRV" secondAttribute="top" id="cQw-pE-pTK"/>
+                            <constraint firstAttribute="trailing" secondItem="Oia-7j-Bxv" secondAttribute="trailing" id="dh8-Jg-NqG"/>
+                            <constraint firstItem="n10-nX-PRV" firstAttribute="trailing" secondItem="VvR-pS-52A" secondAttribute="trailing" id="k3u-pF-CM3"/>
+                            <constraint firstItem="n10-nX-PRV" firstAttribute="top" secondItem="Oia-7j-Bxv" secondAttribute="top" id="wZ7-eg-JrA"/>
+                            <constraint firstItem="Oia-7j-Bxv" firstAttribute="leading" secondItem="ooh-jd-jYc" secondAttribute="leading" id="zJx-AU-grn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y6a-Et-JqN"/>
@@ -336,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdL-Lk-ua0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="-911"/>
+            <point key="canvasLocation" x="1063.768115942029" y="-911.38392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AqH-CT-1T1">
@@ -380,7 +316,7 @@
         <!--AuthViewController-->
         <scene sceneID="J0I-W8-bS9">
             <objects>
-                <viewController id="msa-A0-NQ1" userLabel="AuthViewController" customClass="AuthViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="msa-A0-NQ1" userLabel="AuthViewController" customClass="AuthViewController" customModule="PaintingProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPI-VB-3O3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -410,7 +346,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="0QH-Tz-tIh" kind="presentation" identifier="ShowWebView" id="gWy-An-rfO"/>
+                                    <segue destination="0QH-Tz-tIh" kind="show" identifier="ShowWebView" id="gWy-An-rfO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -437,9 +373,7 @@
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="auth_screen_logo" width="60" height="60"/>
-        <image name="avatar" width="70" height="70"/>
         <image name="like_button_on" width="42" height="42"/>
-        <image name="logout_button" width="44" height="44"/>
         <image name="nav_back_button_white" width="24" height="24"/>
         <image name="share_button" width="50" height="50"/>
         <image name="splash_screen_logo" width="73" height="75.5"/>
