@@ -49,7 +49,7 @@ class ImagesListViewController: UIViewController {
 extension ImagesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reusedIdentifier, for: indexPath)
 
         guard let imageListCell = cell as? ImagesListCell else {
             return UITableViewCell()
@@ -73,7 +73,6 @@ extension ImagesListViewController {
         }
         
         cell.cellImage.image = image
-        cell.dataLable.text = dateFormatter.string(from: Date())
         
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "like_button_on") : UIImage(named: "like_button_off")

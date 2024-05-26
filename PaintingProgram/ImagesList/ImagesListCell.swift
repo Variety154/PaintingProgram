@@ -11,7 +11,6 @@ final class ImagesListCell: UITableViewCell {
     
     @IBOutlet var cellImage: UIImageView!
     @IBOutlet var likeButton: UIButton!
-    @IBOutlet var dataLable: UILabel!
     
-    static let reuseIdentifier = "ImagesListCell"
+    static let reusedIdentifier = "ImagesListCell"
 }

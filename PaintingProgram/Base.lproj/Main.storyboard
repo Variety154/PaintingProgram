@@ -38,17 +38,17 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBoundslayer.maskToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-m1-gEl" userLabel="Like Button">
+                                                    <rect key="frame" x="356" y="4" width="42" height="42"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="like_button_on"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 апреля 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVC-e0-PNX" userLabel="Data Label">
                                                     <rect key="frame" x="24" y="175" width="97.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-m1-gEl" userLabel="Like Button">
-                                                    <rect key="frame" x="356" y="4" width="42" height="42"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="like_button_on"/>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7oV-Oz-1kB" firstAttribute="leading" secondItem="ueT-b3-kBC" secondAttribute="leading" constant="16" id="4hk-yK-jcN"/>
@@ -65,7 +65,6 @@
                                         <color key="backgroundColor" name="YP Black"/>
                                         <connections>
                                             <outlet property="cellImage" destination="7oV-Oz-1kB" id="aIK-eA-Eb7"/>
-                                            <outlet property="dataLable" destination="PVC-e0-PNX" id="2aP-6p-2fj"/>
                                             <outlet property="likeButton" destination="XIW-m1-gEl" id="ogs-0s-8Y9"/>
                                         </connections>
                                     </tableViewCell>
@@ -85,7 +84,6 @@
                             <constraint firstAttribute="trailing" secondItem="3kF-33-ghK" secondAttribute="trailing" id="yuy-jh-l9v"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="LGi-RA-g8t"/>
                     <navigationItem key="navigationItem" id="WA1-LW-Hop"/>
                     <connections>
                         <outlet property="tableView" destination="3kF-33-ghK" id="Ue1-k5-LTB"/>
@@ -164,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="1063.768115942029" y="30.803571428571427"/>
         </scene>
-        <!--Profile-->
+        <!--ProfileViewController-->
         <scene sceneID="4vR-JD-1pw">
             <objects>
-                <viewController title="Profile" id="JJU-XO-H9E" customClass="ProfileViewController" customModule="PaintingProgram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ProfileViewController" id="JJU-XO-H9E" customClass="ProfileViewController" customModule="PaintingProgram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ge1-Q7-VpZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,15 +214,15 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iiw-3m-Yx1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="YP Black"/>
+                        <color key="backgroundColor" red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="YP Black"/>
                         </tabBarAppearance>
                     </tabBar>
                     <connections>
-                        <segue destination="JJU-XO-H9E" kind="relationship" relationship="viewControllers" id="wgC-yb-ftr"/>
                         <segue destination="rFq-wa-1Bi" kind="relationship" relationship="viewControllers" id="Bro-bE-wZE"/>
+                        <segue destination="JJU-XO-H9E" kind="relationship" relationship="viewControllers" id="51G-wo-rpq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATC-A4-KLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
