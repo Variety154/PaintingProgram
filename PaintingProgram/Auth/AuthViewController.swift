@@ -51,6 +51,8 @@ extension AuthViewController: WebViewViewControllerDelegate {
     }
 }
 
+v
+
 extension AuthViewController {
     private func setupView() {
         view.backgroundColor = .ypBlack
