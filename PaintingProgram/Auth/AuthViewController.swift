@@ -74,7 +74,7 @@ extension AuthViewController {
     }
     
     private func setupLogo() {
-        let logoImage = UIImage(named: "splash_logo")
+        let logoImage = UIImage(named: "auth_screen_logo")
         let imageView = UIImageView(image: logoImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
