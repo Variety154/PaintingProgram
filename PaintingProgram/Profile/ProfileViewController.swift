@@ -83,7 +83,7 @@ extension ProfileViewController {
     }
     
     private func exitButtonConfig() {
-        let exitImage = UIImage(named: "exit")
+        let exitImage = UIImage(named: "logout_button")
         guard let exitImage else { return }
         let exitButton = UIButton.systemButton(
             with: exitImage,

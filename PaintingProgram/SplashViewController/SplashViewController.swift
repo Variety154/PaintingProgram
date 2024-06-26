@@ -42,7 +42,7 @@ extension SplashViewController {
     }
     
     private func imageViewConfig() {
-        imageView.image = UIImage(named: "Vector")
+        imageView.image = UIImage(named: "splash_screen_logo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
         
