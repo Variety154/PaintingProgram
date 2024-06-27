@@ -5,30 +5,34 @@
 //  Created by Varvara Kiseleva on 10.05.2024.
 //
 
+import Foundation
 import SwiftKeychainWrapper
 
-protocol OAuth2TokenStorageProtocol {
-    var token: String? { get set }
-}
-
-final class OAuth2TokenStorage: OAuth2TokenStorageProtocol {
-    
-    private enum Keys: String {
-        case token
-    }
+final class OAuth2TokenStorage {
+    private let tokenKey = "OAuth2AccessToken"
+    private let storage = KeychainWrapper.standard
     
     var token: String? {
         get {
-            return KeychainWrapper.standard.string(forKey: Keys.token.rawValue)
+            return storage.string(forKey: tokenKey)
         }
         set {
-            guard let newValue else { return }
-            KeychainWrapper.standard.set(newValue, forKey: Keys.token.rawValue)
+            guard let newValue = newValue else {
+                print("[OAuth2TokenStorage]: newValue Error")
+                return }
+            let isSuccess = storage.set(newValue, forKey: tokenKey)
+            guard isSuccess else {
+                print("[OAuth2TokenStorage]: Save Error - SwiftKeychainWrapper Error")
+                return
+            }
         }
     }
     
-    func resetToken() {
-        KeychainWrapper.standard.removeObject(forKey: Keys.token.rawValue)
+    func logout() {
+        storage.removeObject(forKey: tokenKey)
     }
+    
+    private init() {}
+    
+    static let shared = OAuth2TokenStorage()
 }
-

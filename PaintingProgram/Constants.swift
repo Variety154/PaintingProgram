@@ -8,13 +8,16 @@
 import Foundation
 
 enum Constants {
-    static let accessKey = "rkn9ITDlCqP-rQYENY0zREg7p5qGcZN93QnzhAuRyUg"
-    static let secretKey = "6xQ-n4BWOMZUvGDuo5Bdx0zrBMzVfDl-0RLHTpNJzro"
+    static let accessKey = "wU1B98spbyKpUIAVRiMMEUujaKbh_XmP2v-gXcB_jW0"
+    static let secretKey = "LqCN9rK4zrYwbRlA955jZaPBGeVy5WxMkXXCyoMuezk"
     static let redirectURI = "urn:ietf:wg:oauth:2.0:oob"
-    static let accessScope = "public+read_user+write_likes"
-    static let defaultBaseURL = URL(string: "https://api.unsplash.com")!
-}
-
-enum WebViewConstants {
-    static let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
+    static let accessScope: String = "public+read_user+write_likes"
+    static let grandType: String = "authorization_code"
+    static let defaultBaseURL: URL = {
+        if let url = URL(string: "https://api.unsplash.com") {
+            return url
+        } else {
+            fatalError("Invalid defaultBaseURL: https://api.unsplash.com")
+        }
+    }()
 }

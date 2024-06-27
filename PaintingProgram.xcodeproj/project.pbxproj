@@ -24,9 +24,6 @@
 		1C704E892C13519800434C21 /* ProfileImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704E882C13519800434C21 /* ProfileImageService.swift */; };
 		1C704E8C2C14B73500434C21 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 1C704E8B2C14B73500434C21 /* SwiftKeychainWrapper */; };
 		1C704E8F2C14BF0000434C21 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704E8E2C14BF0000434C21 /* TabBarController.swift */; };
-		1C704E912C14CAFF00434C21 /* ProfileResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704E902C14CAFF00434C21 /* ProfileResult.swift */; };
-		1C704E932C14CB0F00434C21 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704E922C14CB0F00434C21 /* Profile.swift */; };
-		1C704E952C14CB2100434C21 /* UserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C704E942C14CB2100434C21 /* UserResult.swift */; };
 		1C704E982C207FDD00434C21 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1C704E972C207FDD00434C21 /* Kingfisher */; };
 		1C9461552BA5BA9200B8BBDD /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */; };
 		1C9AF0C82B947A1500AFD32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */; };
@@ -51,9 +48,6 @@
 		1C704E862C0DE69300434C21 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		1C704E882C13519800434C21 /* ProfileImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageService.swift; sourceTree = "<group>"; };
 		1C704E8E2C14BF0000434C21 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		1C704E902C14CAFF00434C21 /* ProfileResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResult.swift; sourceTree = "<group>"; };
-		1C704E922C14CB0F00434C21 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		1C704E942C14CB2100434C21 /* UserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResult.swift; sourceTree = "<group>"; };
 		1C9461542BA5BA9200B8BBDD /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		1C9AF0C42B947A1500AFD32D /* PaintingProgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintingProgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9AF0C72B947A1500AFD32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,9 +103,6 @@
 			children = (
 				1C65EEF42BE3ADFA0031D04C /* OAuth2TokenResponseBody.swift */,
 				1C65EEFD2BEE6A590031D04C /* OAuth2TokenStorage.swift */,
-				1C704E902C14CAFF00434C21 /* ProfileResult.swift */,
-				1C704E922C14CB0F00434C21 /* Profile.swift */,
-				1C704E942C14CB2100434C21 /* UserResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,8 +113,8 @@
 				1C65EEF12BE3A2E90031D04C /* OAuth2Service.swift */,
 				1C65EEFB2BEE68050031D04C /* URLSession+data.swift */,
 				1C704E842C0DDC8800434C21 /* UIBlokingProgressHUD.swift */,
-				1C704E862C0DE69300434C21 /* ProfileService.swift */,
 				1C704E882C13519800434C21 /* ProfileImageService.swift */,
+				1C704E862C0DE69300434C21 /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -176,9 +167,9 @@
 				1C9AF0C92B947A1500AFD32D /* SceneDelegate.swift */,
 				1C616A4E2BDC40F700CE5C62 /* Constants.swift */,
 				1C704E8D2C14BEDA00434C21 /* TabBarController */,
+				1C65EEF72BE536BC0031D04C /* SplashViewController */,
 				1C65EEF32BE3ADC20031D04C /* Models */,
 				1C65EEF62BE5361B0031D04C /* Services */,
-				1C65EEF72BE536BC0031D04C /* SplashViewController */,
 				1C65EEEC2BE14D250031D04C /* Auth */,
 				1C616A482BBC244B00CE5C62 /* Profile */,
 				1C9461582BAEEEBF00B8BBDD /* ImagesList */,
@@ -273,11 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C9AF0CC2B947A1500AFD32D /* ImagesListViewController.swift in Sources */,
-				1C704E932C14CB0F00434C21 /* Profile.swift in Sources */,
 				1C704E872C0DE69300434C21 /* ProfileService.swift in Sources */,
-				1C704E912C14CAFF00434C21 /* ProfileResult.swift in Sources */,
 				1C65EEFC2BEE68050031D04C /* URLSession+data.swift in Sources */,
-				1C704E952C14CB2100434C21 /* UserResult.swift in Sources */,
 				1C704E8F2C14BF0000434C21 /* TabBarController.swift in Sources */,
 				1C9461552BA5BA9200B8BBDD /* ImagesListCell.swift in Sources */,
 				1C616A4A2BBC249B00CE5C62 /* ProfileViewController.swift in Sources */,
