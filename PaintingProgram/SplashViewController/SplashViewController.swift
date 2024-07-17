@@ -126,7 +126,7 @@ extension SplashViewController: AuthViewControllerDelegate {
     func authViewController(_ vc: AuthViewController) {
         dismiss(animated: true) { [weak self] in
             guard let self = self,
-                  let token = oauth2TokenStorage.token
+            let token = oauth2TokenStorage.token
             else {
                 print("[SplashViewController authViewControllerDelegate Extension]: self or token undefined")
                 return

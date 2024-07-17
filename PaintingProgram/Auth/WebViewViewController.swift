@@ -23,7 +23,7 @@ final class WebViewViewController: UIViewController {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "login_back_button"), for: .normal)
         
-        button.addTarget(WebViewViewController.self, action: #selector(Self.didTapBackButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(Self.didTapBackButton), for: .touchUpInside)
         
         return button
     }()
@@ -169,4 +169,3 @@ extension WebViewViewController: WKNavigationDelegate {
         }
     }
 }
-
