@@ -57,6 +57,7 @@
                     <constraint firstItem="3XV-AD-EO7" firstAttribute="leading" secondItem="Rw4-EJ-B3k" secondAttribute="leading" constant="16" id="snM-Fh-OUm"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="YP Black"/>
             <connections>
                 <outlet property="cardImage" destination="3XV-AD-EO7" id="Nl0-1f-C1Z"/>
                 <outlet property="dateTitle" destination="hEf-Yc-x0s" id="zjq-Ee-Mub"/>
@@ -70,6 +71,9 @@
         <image name="like_button_on" width="42" height="42"/>
         <namedColor name="YP Background">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="YP Black">
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YP White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
