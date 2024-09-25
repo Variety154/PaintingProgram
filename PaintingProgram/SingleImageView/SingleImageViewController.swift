@@ -5,8 +5,6 @@
 //  Created by Varvara Kiseleva on 03.04.2024.
 //
 
-import UIKit
-
 import Kingfisher
 import UIKit
 
@@ -37,6 +35,7 @@ final class SingleImageViewController: UIViewController {
     private var backButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "backward"), for: .normal)
+        button.accessibilityIdentifier = "SingleBackButton"
         return button
     }()
     
