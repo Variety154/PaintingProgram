@@ -79,8 +79,8 @@ final class PaintingProgramUITests: XCTestCase {
         XCTAssertTrue(cell.waitForExistence(timeout: 5))
         
         app.tabBars.buttons.element(boundBy: 1).tap()
-        XCTAssertTrue(app.staticTexts["Sergey Baskakov"].exists)
-        XCTAssertTrue(app.staticTexts["@s1zzen"].exists)
+        XCTAssertTrue(app.staticTexts["Name Lastname"].exists)
+        XCTAssertTrue(app.staticTexts["@username"].exists)
         
         app.buttons["ProfileLogoutButton"].tap()
         
