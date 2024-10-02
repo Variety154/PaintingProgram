@@ -22,7 +22,7 @@ enum Constants {
 
 struct AuthConfiguration {
     static var standard: AuthConfiguration {
-        return AuthConfiguration(accessKey: Constants.accessKey,
+        .init(accessKey: Constants.accessKey,
                                  secretKey: Constants.secretKey,
                                  redirectURI: Constants.redirectURI,
                                  accessScope: Constants.accessScope,
@@ -40,7 +40,14 @@ struct AuthConfiguration {
     let getTokenUrl: String
     let keyChainKey: String
     
-    init(accessKey: String, secretKey: String, redirectURI: String, accessScope: String, defaultBaseURL: URL, authURLString: String, getTokenUrl: String, keyChainKey: String) {
+    init(accessKey: String,
+         secretKey: String,
+         redirectURI: String,
+         accessScope: String,
+         defaultBaseURL: URL,
+         authURLString: String,
+         getTokenUrl: String,
+         keyChainKey: String) {
         self.accessKey = accessKey
         self.secretKey = secretKey
         self.redirectURI = redirectURI
