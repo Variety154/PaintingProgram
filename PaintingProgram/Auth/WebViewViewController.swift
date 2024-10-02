@@ -105,7 +105,7 @@ final class WebViewViewController: UIViewController & WebViewViewControllerProto
     private func didTapBackButton() {
         delegate?.webViewViewControllerDidCancel(self)
     }
- }
+}
 
 extension WebViewViewController: WKNavigationDelegate {
     func webView(
@@ -129,4 +129,3 @@ extension WebViewViewController: WKNavigationDelegate {
         }
     }
 }
-
