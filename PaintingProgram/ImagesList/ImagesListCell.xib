@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,12 +26,13 @@
                             <constraint firstAttribute="height" constant="30" id="58n-ec-n0O"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmy-hg-cgy" userLabel="Like Button">
-                        <rect key="frame" x="331" y="11" width="42" height="42"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-pW-Shf" userLabel="Like Button">
+                        <rect key="frame" x="359" y="11" width="42" height="42"/>
+                        <accessibility key="accessibilityConfiguration" identifier="likeButton"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="like_button_on"/>
                         <connections>
-                            <action selector="likeButtonClicked:" destination="t4a-KG-fg8" eventType="touchUpInside" id="CNg-4j-vw4"/>
+                            <action selector="likeButtonClicked:" destination="t4a-KG-fg8" eventType="touchUpInside" id="gT0-Mh-x72"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 января 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-Yc-x0s" userLabel="DataLabel">
@@ -43,10 +43,9 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kmy-hg-cgy" firstAttribute="top" secondItem="Rw4-EJ-B3k" secondAttribute="topMargin" id="15Z-bk-nhh"/>
                     <constraint firstItem="hEf-Yc-x0s" firstAttribute="leading" secondItem="3XV-AD-EO7" secondAttribute="leading" constant="8" id="67m-ot-lbE"/>
+                    <constraint firstItem="Cgg-pW-Shf" firstAttribute="top" secondItem="Rw4-EJ-B3k" secondAttribute="topMargin" id="9gF-pU-OHq"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hEf-Yc-x0s" secondAttribute="trailing" id="Hov-Cx-Wo5"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="kmy-hg-cgy" secondAttribute="trailing" id="IwH-lI-39b"/>
                     <constraint firstAttribute="trailing" secondItem="3XV-AD-EO7" secondAttribute="trailing" constant="16" id="KDg-kd-OVk"/>
                     <constraint firstItem="3XV-AD-EO7" firstAttribute="top" secondItem="Rw4-EJ-B3k" secondAttribute="top" constant="4" id="Rd0-dG-DF8"/>
                     <constraint firstAttribute="bottom" secondItem="0fh-Oz-Z58" secondAttribute="bottom" id="TQs-DW-uPj"/>
@@ -54,6 +53,7 @@
                     <constraint firstItem="hEf-Yc-x0s" firstAttribute="bottom" secondItem="3XV-AD-EO7" secondAttribute="bottom" constant="-8" id="aZM-fB-PRt"/>
                     <constraint firstAttribute="bottom" secondItem="3XV-AD-EO7" secondAttribute="bottom" constant="4" id="dvL-Ka-PCI"/>
                     <constraint firstItem="0fh-Oz-Z58" firstAttribute="leading" secondItem="Rw4-EJ-B3k" secondAttribute="leading" constant="16" id="h2s-fA-cs3"/>
+                    <constraint firstItem="Cgg-pW-Shf" firstAttribute="trailingMargin" secondItem="Rw4-EJ-B3k" secondAttribute="trailing" id="jAv-D1-OYy"/>
                     <constraint firstItem="3XV-AD-EO7" firstAttribute="leading" secondItem="Rw4-EJ-B3k" secondAttribute="leading" constant="16" id="snM-Fh-OUm"/>
                 </constraints>
             </tableViewCellContentView>
@@ -61,7 +61,7 @@
             <connections>
                 <outlet property="cardImage" destination="3XV-AD-EO7" id="Nl0-1f-C1Z"/>
                 <outlet property="dateTitle" destination="hEf-Yc-x0s" id="zjq-Ee-Mub"/>
-                <outlet property="likeButton" destination="kmy-hg-cgy" id="EcF-ex-QJq"/>
+                <outlet property="likeButton" destination="Cgg-pW-Shf" id="7Bi-se-d5u"/>
             </connections>
             <point key="canvasLocation" x="-289" y="156"/>
         </tableViewCell>
