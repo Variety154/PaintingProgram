@@ -22,6 +22,7 @@ final class PaintingProgramUITests: XCTestCase {
         XCTAssertTrue(webView.waitForExistence(timeout: 5))
         
         let loginTextField = webView.descendants(matching: .textField).element
+        sleep(5)
         XCTAssertTrue(loginTextField.waitForExistence(timeout: 5))
         loginTextField.tap()
         loginTextField.typeText("varvarakit15042103@gmail.com")
