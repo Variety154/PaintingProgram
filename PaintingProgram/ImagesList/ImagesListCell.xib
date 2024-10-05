@@ -9,33 +9,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="t4a-KG-fg8" customClass="ImagesListCell" customModule="PaintingProgram" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="138" id="PMO-2o-hr5" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="138"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4a-KG-fg8" id="Rw4-EJ-B3k">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PMO-2o-hr5" id="tJ4-bg-YNC">
                 <rect key="frame" x="0.0" y="0.0" width="393" height="138"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="3XV-AD-EO7" userLabel="Card Image">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZrM-jP-eSe">
                         <rect key="frame" x="16" y="4" width="361" height="130"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fh-Oz-Z58">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="os0-VR-yhT">
                         <rect key="frame" x="16" y="108" width="361" height="30"/>
-                        <color key="backgroundColor" name="YP Background"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.1197712879" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="58n-ec-n0O"/>
+                            <constraint firstAttribute="height" constant="30" id="bJZ-gZ-xhP"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-pW-Shf" userLabel="Like Button">
-                        <rect key="frame" x="359" y="11" width="42" height="42"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0E-Ek-4OM">
+                        <rect key="frame" x="331" y="11" width="42" height="42"/>
                         <accessibility key="accessibilityConfiguration" identifier="likeButton"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="like_button_on"/>
                         <connections>
-                            <action selector="likeButtonClicked:" destination="t4a-KG-fg8" eventType="touchUpInside" id="gT0-Mh-x72"/>
+                            <action selector="likeButtonClicked:" destination="PMO-2o-hr5" eventType="touchUpInside" id="Diy-MS-u4Z"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 января 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEf-Yc-x0s" userLabel="DataLabel">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 января 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9v-Rd-bmV" userLabel="DataLabel">
                         <rect key="frame" x="24.000000000000007" y="110.33333333333333" width="88.666666666666686" height="15.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" name="YP White"/>
@@ -43,27 +48,27 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hEf-Yc-x0s" firstAttribute="leading" secondItem="3XV-AD-EO7" secondAttribute="leading" constant="8" id="67m-ot-lbE"/>
-                    <constraint firstItem="Cgg-pW-Shf" firstAttribute="top" secondItem="Rw4-EJ-B3k" secondAttribute="topMargin" id="9gF-pU-OHq"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hEf-Yc-x0s" secondAttribute="trailing" id="Hov-Cx-Wo5"/>
-                    <constraint firstAttribute="trailing" secondItem="3XV-AD-EO7" secondAttribute="trailing" constant="16" id="KDg-kd-OVk"/>
-                    <constraint firstItem="3XV-AD-EO7" firstAttribute="top" secondItem="Rw4-EJ-B3k" secondAttribute="top" constant="4" id="Rd0-dG-DF8"/>
-                    <constraint firstAttribute="bottom" secondItem="0fh-Oz-Z58" secondAttribute="bottom" id="TQs-DW-uPj"/>
-                    <constraint firstAttribute="trailing" secondItem="0fh-Oz-Z58" secondAttribute="trailing" constant="16" id="TmC-L2-WGY"/>
-                    <constraint firstItem="hEf-Yc-x0s" firstAttribute="bottom" secondItem="3XV-AD-EO7" secondAttribute="bottom" constant="-8" id="aZM-fB-PRt"/>
-                    <constraint firstAttribute="bottom" secondItem="3XV-AD-EO7" secondAttribute="bottom" constant="4" id="dvL-Ka-PCI"/>
-                    <constraint firstItem="0fh-Oz-Z58" firstAttribute="leading" secondItem="Rw4-EJ-B3k" secondAttribute="leading" constant="16" id="h2s-fA-cs3"/>
-                    <constraint firstItem="Cgg-pW-Shf" firstAttribute="trailingMargin" secondItem="Rw4-EJ-B3k" secondAttribute="trailing" id="jAv-D1-OYy"/>
-                    <constraint firstItem="3XV-AD-EO7" firstAttribute="leading" secondItem="Rw4-EJ-B3k" secondAttribute="leading" constant="16" id="snM-Fh-OUm"/>
+                    <constraint firstItem="B0E-Ek-4OM" firstAttribute="top" secondItem="tJ4-bg-YNC" secondAttribute="topMargin" id="5Ql-KH-0nY"/>
+                    <constraint firstAttribute="bottom" secondItem="ZrM-jP-eSe" secondAttribute="bottom" constant="4" id="6A2-CN-3dq"/>
+                    <constraint firstItem="S9v-Rd-bmV" firstAttribute="bottom" secondItem="ZrM-jP-eSe" secondAttribute="bottom" constant="-8" id="8GB-iH-QNT"/>
+                    <constraint firstItem="ZrM-jP-eSe" firstAttribute="leading" secondItem="tJ4-bg-YNC" secondAttribute="leading" constant="16" id="CHM-Bu-x9w"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S9v-Rd-bmV" secondAttribute="trailing" id="Fbe-z6-UwR"/>
+                    <constraint firstAttribute="bottom" secondItem="os0-VR-yhT" secondAttribute="bottom" id="I9G-aq-4tq"/>
+                    <constraint firstItem="os0-VR-yhT" firstAttribute="leading" secondItem="tJ4-bg-YNC" secondAttribute="leading" constant="16" id="MH9-vd-qIO"/>
+                    <constraint firstAttribute="trailing" secondItem="os0-VR-yhT" secondAttribute="trailing" constant="16" id="TpZ-sY-nrH"/>
+                    <constraint firstItem="ZrM-jP-eSe" firstAttribute="top" secondItem="tJ4-bg-YNC" secondAttribute="top" constant="4" id="l9t-9E-eUA"/>
+                    <constraint firstAttribute="trailing" secondItem="ZrM-jP-eSe" secondAttribute="trailing" constant="16" id="qcs-Cm-Zf6"/>
+                    <constraint firstItem="S9v-Rd-bmV" firstAttribute="leading" secondItem="ZrM-jP-eSe" secondAttribute="leading" constant="8" id="tG6-5A-ZTY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="B0E-Ek-4OM" secondAttribute="trailing" id="ucj-it-E6M"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" name="YP Black"/>
+            <color key="backgroundColor" name="YP Background"/>
             <connections>
-                <outlet property="cardImage" destination="3XV-AD-EO7" id="Nl0-1f-C1Z"/>
-                <outlet property="dateTitle" destination="hEf-Yc-x0s" id="zjq-Ee-Mub"/>
-                <outlet property="likeButton" destination="Cgg-pW-Shf" id="7Bi-se-d5u"/>
+                <outlet property="cardImage" destination="ZrM-jP-eSe" id="rbs-RI-27T"/>
+                <outlet property="dateTitle" destination="S9v-Rd-bmV" id="6cL-pj-egx"/>
+                <outlet property="likeButton" destination="B0E-Ek-4OM" id="gvF-UI-zXY"/>
             </connections>
-            <point key="canvasLocation" x="-289" y="156"/>
+            <point key="canvasLocation" x="117" y="43"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -71,9 +76,6 @@
         <image name="like_button_on" width="42" height="42"/>
         <namedColor name="YP Background">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="YP Black">
-            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="YP White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
